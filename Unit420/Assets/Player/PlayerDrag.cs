@@ -48,8 +48,10 @@ public class PlayerDrag : MonoBehaviour {
 		if (clicked)
 			Dragging ();
 		
-		if (!destroySpring) {
-			if (!rb2D.isKinematic && velocityX.sqrMagnitude > rb2D.velocity.sqrMagnitude) {
+		if (!destroySpring) 
+        {
+			if (!rb2D.isKinematic && velocityX.sqrMagnitude > rb2D.velocity.sqrMagnitude) 
+            {
                 destroySpring = true;
                 spring.enabled = false;
 				rb2D.velocity = velocityX;
@@ -62,7 +64,8 @@ public class PlayerDrag : MonoBehaviour {
 			StringUpdate ();
 			
 		}
-		else {
+		else 
+        {
 			stringLeft.enabled = false;
 			stringRight.enabled = false;
 		}
@@ -115,8 +118,7 @@ public class PlayerDrag : MonoBehaviour {
 
     public void setNewProjectile(LineRenderer stringLeft, LineRenderer stringRight,Rigidbody2D RdSlingShot,Transform slingShotTransform)
     {
-        rb2D.velocity = Vector2.zero;
-        velocityX = Vector2.zero;
+        setSpeed(Vector2.zero);
         destroySpring = false;
         spring.connectedBody = RdSlingShot;
         rb2D.isKinematic = true;
@@ -134,6 +136,15 @@ public class PlayerDrag : MonoBehaviour {
         transform.position = new Vector3(slingShotTransform.position.x, slingShotTransform.position.y , transform.position.z);
     }
 
+    public void setSpeed(Vector2 speed)
+    {
+        rb2D.velocity = speed;
+        velocityX = speed;
+    }
 
+    public Rigidbody2D getRB()
+    {
+        return rb2D;
+    }
 
 }
