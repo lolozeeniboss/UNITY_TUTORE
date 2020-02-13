@@ -12,6 +12,14 @@ public class SlingShotV3 : MonoBehaviour
     private Ray leftRay;
     private bool hasPlayer;
 
+    private IEnumerator waitForSec(float sec)
+    {
+        BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider.enabled = false;
+        yield return new WaitForSeconds(sec);
+        boxCollider.enabled = true;
+    }
+
     void Start()
     {
         StringSetup();
@@ -44,10 +52,11 @@ public class SlingShotV3 : MonoBehaviour
             Rigidbody2D playerRB = player.GetComponent<Rigidbody2D>();
             SpringJoint2D playerSpring = player.GetComponent<SpringJoint2D>();
 
-            //Si le joueur est en mouvement, l'elastique "attrape" le joueur
-            if (playerRB.velocity != Vector2.zero)
+            //Si le joueur est en mouvement et n'est pas sur un elastique, et que l'elastique n'a pas le joueur, l'elastique "attrape" le joueur
+            //Debug.Log(player.isOnSlingshot());
+            if (playerRB.velocity != Vector2.zero & !player.isOnSlingshot() & hasPlayer == false)
             {
-                //Debug.Log(name);
+                Debug.Log(name);
                 Start();
                 hasPlayer = true;
                 player.goesOnSlingShot();

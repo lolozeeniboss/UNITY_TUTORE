@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     {
         if (onSlingShot & rb2d.isKinematic == false)
         {
-            Debug.Log("Speed: " + rb2d.velocity.sqrMagnitude);
+            //Debug.Log("Speed: " + rb2d.velocity.sqrMagnitude);
             if (speed <= rb2d.velocity.sqrMagnitude)
             {
                 speed = rb2d.velocity.sqrMagnitude;
