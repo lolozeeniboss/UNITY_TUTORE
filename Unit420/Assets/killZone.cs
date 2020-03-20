@@ -10,6 +10,6 @@ public class killZone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Demo");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
