@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,14 +12,7 @@ public class SlingShotV3 : MonoBehaviour
 
     private Ray leftRay;
     private bool hasPlayer;
-
-    private IEnumerator waitForSec(float sec)
-    {
-        BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
-        boxCollider.enabled = false;
-        yield return new WaitForSeconds(sec);
-        boxCollider.enabled = true;
-    }
+    private int releaseTime;
 
     void Start()
     {
@@ -27,6 +21,7 @@ public class SlingShotV3 : MonoBehaviour
         spring.enabled = false;
         leftRay = new Ray(rightString.transform.position, Vector3.zero);
         hasPlayer = false;
+        releaseTime = 0;
     }
 
     void StringSetup()
@@ -53,10 +48,17 @@ public class SlingShotV3 : MonoBehaviour
             SpringJoint2D playerSpring = player.GetComponent<SpringJoint2D>();
 
             //Si le joueur est en mouvement et n'est pas sur un elastique, et que l'elastique n'a pas le joueur, l'elastique "attrape" le joueur
-            //Debug.Log(player.isOnSlingshot());
-            if (playerRB.velocity != Vector2.zero & !player.isOnSlingshot() & hasPlayer == false)
+            //De plus, on souhaite eviter de rattraper le joueur lorsqu'on le lance, ainsi on check si le "timer" du moment ou l'elastique a lache le joueur a deja ete utilise 
+            //(si non il est egal a 0 et on peut lancer le joueur)
+            //Si il a deja ete utilise alors on s'assure qu'assez de temps s'est passe pour que le joueur ait pu sortir de l'elastique
+            int millisecPassedSinceRelease = Environment.TickCount & Int32.MaxValue - releaseTime;
+            if (releaseTime != 0) 
             {
-                Debug.Log(name);
+                //Debug.Log("Time passed since release: " + millisecPassedSinceRelease);
+            }
+            if (playerRB.velocity != Vector2.zero & hasPlayer == false & (releaseTime == 0 || millisecPassedSinceRelease > 500))
+            {
+                //Debug.Log("catched!");
                 Start();
                 hasPlayer = true;
                 player.goesOnSlingShot();
@@ -79,17 +81,29 @@ public class SlingShotV3 : MonoBehaviour
         }
     }
 
+
+    void disableStrings()
+    {
+        leftString.enabled = false;
+        rightString.enabled = false;
+    }
+
+
     // Update is called once per frame
     void Update()
     {
-        if (hasPlayer == false)
+        if (hasPlayer == true)
         {
-            leftString.enabled = false;
-            rightString.enabled = false;
+            StringUpdate();
+            hasPlayer = (player.isOnSlingshot() & player.GetComponent<SpringJoint2D>().connectedBody.Equals(GetComponent<Rigidbody2D>()));
+            if (hasPlayer != true)
+            {
+                disableStrings();
+                releaseTime = Environment.TickCount & Int32.MaxValue;
+            }
         } else
         {
-            hasPlayer = (player.isOnSlingshot() & player.GetComponent<SpringJoint2D>().connectedBody.Equals(GetComponent<Rigidbody2D>()));
+            disableStrings();
         }
-        StringUpdate();
     }    
 }

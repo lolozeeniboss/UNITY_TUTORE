@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
                 speed = rb2d.velocity.sqrMagnitude;
             } else
             {
-                Debug.Log("max speed reached, launching!");
+                rb2d.freezeRotation = false;
                 spring.enabled = false;
                 onSlingShot = false;
                 speed = 0;
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public bool isClicked()
+    public bool IsClicked()
     {
         return clicked;
     }
