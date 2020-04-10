@@ -84,7 +84,7 @@ public class SlingShotV3 : MonoBehaviour
 
     void disableStrings()
     {
-        leftString.enabled = false;
+        leftString.SetPosition(1,rightString.transform.position);
         rightString.enabled = false;
     }
 
