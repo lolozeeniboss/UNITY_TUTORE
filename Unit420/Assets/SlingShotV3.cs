@@ -9,9 +9,9 @@ public class SlingShotV3 : MonoBehaviour
     public LineRenderer rightString;
     public Player player;
     public float stretchLimit = 1.0f;
+    public bool hasPlayer;
 
     private Ray leftRay;
-    private bool hasPlayer;
     private int releaseTime;
 
     void Start()
@@ -40,7 +40,7 @@ public class SlingShotV3 : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -56,12 +56,12 @@ public class SlingShotV3 : MonoBehaviour
             {
                 //Debug.Log("Time passed since release: " + millisecPassedSinceRelease);
             }
-            if (playerRB.velocity != Vector2.zero & hasPlayer == false & (releaseTime == 0 || millisecPassedSinceRelease > 500))
+            if (playerRB.velocity != Vector2.zero & hasPlayer == false & (releaseTime == 0 || millisecPassedSinceRelease > 400))
             {
                 //Debug.Log("catched!");
                 Start();
                 hasPlayer = true;
-                player.goesOnSlingShot();
+                player.GoesOnSlingShot();
 
                 leftString.enabled = true;
                 rightString.enabled = true;
@@ -95,7 +95,7 @@ public class SlingShotV3 : MonoBehaviour
         if (hasPlayer == true)
         {
             StringUpdate();
-            hasPlayer = (player.isOnSlingshot() & player.GetComponent<SpringJoint2D>().connectedBody.Equals(GetComponent<Rigidbody2D>()));
+            hasPlayer = (player.IsOnSlingshot() & player.GetComponent<SpringJoint2D>().connectedBody.Equals(GetComponent<Rigidbody2D>()));
             if (hasPlayer != true)
             {
                 disableStrings();

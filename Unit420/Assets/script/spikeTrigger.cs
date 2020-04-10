@@ -24,7 +24,7 @@ public class spikeTrigger : MonoBehaviour
         moving = false;
         startSpikeTransformPosition = cloneVector3(spike.transform.localPosition);
         startTransformPosition = cloneVector3(gameObject.transform.localPosition);
-        Debug.Log(startTransformPosition);
+        //Debug.Log(startTransformPosition);
     }
 
     private void Update()

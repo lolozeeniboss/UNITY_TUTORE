@@ -10,10 +10,12 @@ public class Player : MonoBehaviour
     private float distance = 1;
     private bool onSlingShot;
     private float speed;
+    private bool onFire;
 
     // Start is called before the first frame update
     void Start()
     {
+        onFire = false;
         speed = 0;
         clicked = false;
         onSlingShot = false;
@@ -92,13 +94,23 @@ public class Player : MonoBehaviour
         }
     }
 
-    public bool isOnSlingshot()
+    public bool IsOnSlingshot()
     {
         return onSlingShot;
     }
 
-    public void goesOnSlingShot()
+    public void GoesOnSlingShot()
     {
         onSlingShot = true;
+    }
+
+    public void SetOnFire(bool onFire)
+    {
+        this.onFire = onFire;
+    }
+
+    public bool IsOnFire()
+    {
+        return onFire;
     }
 }
