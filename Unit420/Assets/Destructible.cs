@@ -5,12 +5,7 @@ using UnityEngine;
 public class Destructible : MonoBehaviour
 {
     public Player player;
-    private ParticleSystem particle;
-
-    private void Awake()
-    {
-        particle = GetComponentInChildren<ParticleSystem>();
-    }
+    public ParticleSystem particle;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,16 +14,13 @@ public class Destructible : MonoBehaviour
         {
             player.SetOnFire(false);
             //Debug.Log("test");
-            StartCoroutine(Break());
+            Break();
         }
     }
 
-    private IEnumerator Break()
+    private void Break()
     {
-        gameObject.GetComponent<Renderer>().enabled = false;
         particle.Play();
-
-        yield return new WaitForSeconds(particle.main.startLifetime.constantMax);
         Destroy(gameObject);
     }
 }
