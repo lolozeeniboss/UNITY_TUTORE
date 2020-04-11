@@ -62,6 +62,7 @@ public class SlingShotV3 : MonoBehaviour
                 Start();
                 hasPlayer = true;
                 player.GoesOnSlingShot();
+                player.SetOnFire(false);
 
                 leftString.enabled = true;
                 rightString.enabled = true;
@@ -82,7 +83,7 @@ public class SlingShotV3 : MonoBehaviour
     }
 
 
-    void disableStrings()
+    public void disableStrings()
     {
         leftString.SetPosition(1,rightString.transform.position);
         rightString.enabled = false;

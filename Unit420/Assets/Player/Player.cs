@@ -106,6 +106,14 @@ public class Player : MonoBehaviour
 
     public void SetOnFire(bool onFire)
     {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (onFire)
+        {
+            spriteRenderer.color = Color.red;
+        } else
+        {
+            spriteRenderer.color = Color.white;
+        }
         this.onFire = onFire;
     }
 
