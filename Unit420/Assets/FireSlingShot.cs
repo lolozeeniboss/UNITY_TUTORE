@@ -6,7 +6,6 @@ public class FireSlingShot : SlingShotV3
 {
     private void Start()
     {
-        Debug.Log("coucou");
         leftString.material.color = Color.red;
         rightString.material.color = Color.red;
         rightString.SetPosition(1, leftString.transform.position);
