@@ -6,8 +6,8 @@ public class FireSlingShot : SlingShotV3
 {
     private void Start()
     {
-        leftString.material.color = Color.red;
-        rightString.material.color = Color.red;
+        leftString.material.color = Color.red / 2;
+        rightString.material.color = Color.red / 2;
         rightString.SetPosition(1, leftString.transform.position);
         leftString.enabled = false;
         disableStrings();
