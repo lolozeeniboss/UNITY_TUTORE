@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FreeCamera : MonoBehaviour
+public class MainCamera : MonoBehaviour
 {
-   
+    public Transform player;
+    public Vector3 offset;
+    public bool Camera = true;
     public float panSpeed = 20f;
 
 
     // Update is called once per frame
     void Update()
+    {
+
+        executeCamera();
+    }
+    public void FreeCamera()
     {
         Vector3 pos = transform.position;
         float moveAmount = 100f;
@@ -31,5 +38,25 @@ public class FreeCamera : MonoBehaviour
             pos.y -= panSpeed * Time.deltaTime;
         }
         transform.position = pos;
+
+    }
+    public void followCamera()
+    {
+        transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, transform.position.z); // Camera follows the player with specified offset position
+    }
+    public void changeCamera()
+    {
+        Camera = !Camera;
+    }
+    public void executeCamera()
+    {
+        if (Camera)
+        {
+            followCamera();
+        }
+        else
+        {
+            FreeCamera();
+        }
     }
 }
