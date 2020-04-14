@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Script : MonoBehaviour
+public class RedSlingShot : SlingShotV3
 {
     // Start is called before the first frame update
     void Start()
