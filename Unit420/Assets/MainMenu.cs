@@ -5,10 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    private string levelname = "menupause loris";
+    public SceneFader fader;
+    private string levelname = "Slingshot_tuto";
     public void PlayGame ()
     {
-        SceneManager.LoadScene(levelname);
+        fader.FadeTo(levelname);
+    }
+
+    public void LevelSelector()
+    {
+        fader.FadeTo("levelselector");
+    }
+
+    public void SetLevel(string s)
+    {
+        levelname = s;
     }
 
     public void QuitGame ()
