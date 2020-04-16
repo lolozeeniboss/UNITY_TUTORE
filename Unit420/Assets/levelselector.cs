@@ -9,4 +9,9 @@ public class levelselector : MonoBehaviour
     {
         fader.FadeTo(levelname);
     }
+
+    public void Menu()
+    {
+        fader.FadeTo("Menu");
+    }
 }
