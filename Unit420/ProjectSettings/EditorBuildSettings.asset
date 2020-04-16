@@ -8,15 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Demo.unity
-    guid: 04660cbd80c47e54287c1a468919f009
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: c4bbbf4f55a8346439efacd1af75c70c
   - enabled: 1
     path: Assets/Scenes/levelselector.unity
-    guid: cfd9c2fb7a0fac0479ddfbe345985e6e
+    guid: 76b07e5b32de4544f866dde7f408371c
   - enabled: 1
     path: Assets/Scenes/Slingshot_tuto.unity
     guid: 375c82e05bff7e64bbf07fde78ca87cd
@@ -29,4 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/zone loris.unity
     guid: 8808d5f3d0bc1a1448eef6bbc6d18857
+  - enabled: 0
+    path: Assets/Scenes/Demo.unity
+    guid: 04660cbd80c47e54287c1a468919f009
   m_configObjects: {}
