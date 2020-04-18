@@ -127,6 +127,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4235648325395837580, guid: a252b6333b2226c40bbc019cc43d2808,
+        type: 3}
+      propertyPath: Button
+      value: 
+      objectReference: {fileID: 577525395}
+    - target: {fileID: 4235648325395837580, guid: a252b6333b2226c40bbc019cc43d2808,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1526578027}
     - target: {fileID: 6344956046858267897, guid: a252b6333b2226c40bbc019cc43d2808,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -797,6 +807,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13c7df0ceded4ac42a4cf072e652893e, type: 3}
+--- !u!114 &577525395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 377997041227871314, guid: 13c7df0ceded4ac42a4cf072e652893e,
+    type: 3}
+  m_PrefabInstance: {fileID: 577525394}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &618281503
 PrefabInstance:
   m_ObjectHideFlags: 0
