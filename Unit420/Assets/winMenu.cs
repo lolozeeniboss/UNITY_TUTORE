@@ -46,7 +46,7 @@ public class winMenu : MonoBehaviour
         {
             fader.FadeTo(s[0] +'_'+ (int.Parse(s[1]) + 1));
         }
-        catch (Exception e)
+        catch
         {
             fader.FadeTo("Menu");
         }

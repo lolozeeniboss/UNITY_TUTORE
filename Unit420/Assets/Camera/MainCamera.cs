@@ -22,7 +22,6 @@ public class MainCamera : MonoBehaviour
     {
 
         Vector3 pos = transform.position;
-        float moveAmount = 100f;
         float edgeSize = 30f;
        
         if (Input.mousePosition.x > Screen.width - edgeSize)
