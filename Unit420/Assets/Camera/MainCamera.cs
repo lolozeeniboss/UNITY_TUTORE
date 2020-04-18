@@ -10,7 +10,6 @@ public class MainCamera : MonoBehaviour
     public Vector3 offset;
     public bool Camera = true;
     public float panSpeed = 20f;
-    public Text Button;
 
 
     // Update is called once per frame
@@ -43,14 +42,9 @@ public class MainCamera : MonoBehaviour
             pos.y -= panSpeed * Time.deltaTime;
         }
         transform.position = pos;
-
-        Button.text= "FollowCam";
     }
     public void followCamera()
     {
-        /*Text txt = transform.Find("Text").GetComponent<Text>();
-        txt.text=("FreeCaméra");*/
-        Button.text = "FreeCam";
         transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, transform.position.z); // Camera follows the player with specified offset position
     }
     public void changeCamera()

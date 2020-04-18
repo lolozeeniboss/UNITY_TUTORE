@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class winZone : MonoBehaviour
 {
-    public GameObject uiObject;
+    public winMenu uiObject;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        uiObject.active = true;
-        Time.timeScale = 0.3f;
+        uiObject.Callwin();
+     
     }
 }

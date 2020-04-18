@@ -28,7 +28,7 @@ public class winMenu : MonoBehaviour
         Debug.Log("win");
         pauseButtonUI.SetActive(false);
         winMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 0.3f;
     }
 
 
@@ -44,7 +44,7 @@ public class winMenu : MonoBehaviour
         string[] s = SceneManager.GetActiveScene().name.Split('_');
         try
         {
-            fader.FadeTo(s[0] + (int.Parse(s[1]) + 1));
+            fader.FadeTo(s[0] +'_'+ (int.Parse(s[1]) + 1));
         }
         catch (Exception e)
         {
