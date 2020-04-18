@@ -5,9 +5,9 @@ public class levelselector : MonoBehaviour
 
     public SceneFader fader;
 
-   public void Select(string levelname)
+   public void Select(int levelname)
     {
-        fader.FadeTo(levelname);
+        fader.FadeTo("level_"+levelname);
     }
 
     public void Menu()
