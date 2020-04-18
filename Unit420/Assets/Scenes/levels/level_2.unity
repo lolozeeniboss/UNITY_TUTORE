@@ -433,6 +433,31 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2218545759141336290, guid: f7b98e0e23e0f454da7f3139abbb891d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 700191972}
+    - target: {fileID: 2218545759141336290, guid: f7b98e0e23e0f454da7f3139abbb891d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218545759141336290, guid: f7b98e0e23e0f454da7f3139abbb891d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 840981365}
+    - target: {fileID: 2218545759141336290, guid: f7b98e0e23e0f454da7f3139abbb891d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: changeCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2218545759141336290, guid: f7b98e0e23e0f454da7f3139abbb891d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3112711873656065435, guid: f7b98e0e23e0f454da7f3139abbb891d,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -477,7 +502,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 729402624}
+      objectReference: {fileID: 0}
     - target: {fileID: 4989270165017284844, guid: f7b98e0e23e0f454da7f3139abbb891d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -722,9 +747,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042a7c79e29dd93469a9a36de852cbc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &729402624 stripped
+--- !u!114 &700191972 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3626976076718544683, guid: f7b98e0e23e0f454da7f3139abbb891d,
+  m_CorrespondingSourceObject: {fileID: 5853020295626687644, guid: f7b98e0e23e0f454da7f3139abbb891d,
     type: 3}
   m_PrefabInstance: {fileID: 700191970}
   m_PrefabAsset: {fileID: 0}
