@@ -41,6 +41,7 @@ public class winMenu : MonoBehaviour
 
     public void NextGame()
     {
+        Time.timeScale = 1f;
         string[] s = SceneManager.GetActiveScene().name.Split('_');
         try
         {
