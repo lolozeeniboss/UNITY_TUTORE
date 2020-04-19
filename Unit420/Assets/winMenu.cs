@@ -43,11 +43,11 @@ public class winMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         string[] s = SceneManager.GetActiveScene().name.Split('_');
-        try
+        if (Application.CanStreamedLevelBeLoaded(s[0] + '_' + (int.Parse(s[1]) + 1)))
         {
-            fader.FadeTo(s[0] +'_'+ (int.Parse(s[1]) + 1));
+            fader.FadeTo(s[0] + '_' + (int.Parse(s[1]) + 1));
         }
-        catch
+        else
         {
             fader.FadeTo("Menu");
         }
