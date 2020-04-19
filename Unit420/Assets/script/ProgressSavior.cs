@@ -7,7 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class ProgressSavior : MonoBehaviour
 {
+#if UNITY_EDITOR
     string chemin = Application.streamingAssetsPath + "/lastlevel.json";
+#elif UNITY_ANDROID && !UNITY_EDITOR
+    string chemin = "jar:file://" + Application.dataPath + "!/assets" + "/lastlevel.json";
+#endif
+
     Regex levelRegex = new Regex(@"^level_[1-9][0-9]*$");
     string Json;
     string levelname;
