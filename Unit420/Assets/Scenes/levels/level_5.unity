@@ -2279,6 +2279,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c18cc3ff3d885e4c986d11d31d90c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &640995427 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4190446841949685914, guid: f7b98e0e23e0f454da7f3139abbb891d,
+    type: 3}
+  m_PrefabInstance: {fileID: 640995424}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042a7c79e29dd93469a9a36de852cbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &722106654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2900,6 +2912,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinZone
       objectReference: {fileID: 0}
+    - target: {fileID: 8198386223420942463, guid: 7fe9ded1a023cd5438160d0e9a06fac8,
+        type: 3}
+      propertyPath: uiObject
+      value: 
+      objectReference: {fileID: 640995427}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fe9ded1a023cd5438160d0e9a06fac8, type: 3}
 --- !u!1001 &1006977128
