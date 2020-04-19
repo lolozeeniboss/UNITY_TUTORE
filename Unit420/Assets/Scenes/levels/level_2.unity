@@ -593,6 +593,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5853020295626687644, guid: f7b98e0e23e0f454da7f3139abbb891d,
+        type: 3}
+      propertyPath: indicator
+      value: 
+      objectReference: {fileID: 1887590286}
     - target: {fileID: 6638735698046632973, guid: f7b98e0e23e0f454da7f3139abbb891d,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1149,6 +1154,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d20c0963eaae07a4994a6f5567ba333c, type: 3}
+--- !u!1 &1887590286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9173514446070870069, guid: f7b98e0e23e0f454da7f3139abbb891d,
+    type: 3}
+  m_PrefabInstance: {fileID: 700191970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1902582158
 PrefabInstance:
   m_ObjectHideFlags: 0
