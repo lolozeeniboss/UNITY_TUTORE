@@ -488,6 +488,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExtraLargeSlingShot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 294615600899547258, guid: 333149d6aa1c8024aa2f16ad2900b596,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 981642315}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 333149d6aa1c8024aa2f16ad2900b596, type: 3}
 --- !u!1001 &302102528
@@ -2421,6 +2426,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExtraLargeSlingShot (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 294615600899547258, guid: 333149d6aa1c8024aa2f16ad2900b596,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 981642315}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 333149d6aa1c8024aa2f16ad2900b596, type: 3}
 --- !u!1001 &1077419720
@@ -3418,7 +3428,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1411502486}
+      objectReference: {fileID: 0}
     - target: {fileID: 2218545759141336290, guid: f7b98e0e23e0f454da7f3139abbb891d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -3543,7 +3553,7 @@ PrefabInstance:
         type: 3}
       propertyPath: indicator
       value: 
-      objectReference: {fileID: 1411502487}
+      objectReference: {fileID: 0}
     - target: {fileID: 6638735698046632973, guid: f7b98e0e23e0f454da7f3139abbb891d,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -3698,24 +3708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042a7c79e29dd93469a9a36de852cbc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1411502486 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5853020295626687644, guid: f7b98e0e23e0f454da7f3139abbb891d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1411502484}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c18cc3ff3d885e4c986d11d31d90c2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1411502487 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9173514446070870069, guid: f7b98e0e23e0f454da7f3139abbb891d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1411502484}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1414706625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5781,5 +5773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExtraLargeSlingShot
       objectReference: {fileID: 0}
+    - target: {fileID: 294615600899547258, guid: 333149d6aa1c8024aa2f16ad2900b596,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 981642315}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 333149d6aa1c8024aa2f16ad2900b596, type: 3}

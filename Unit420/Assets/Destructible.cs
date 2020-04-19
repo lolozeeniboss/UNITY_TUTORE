@@ -9,13 +9,17 @@ public class Destructible : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("player is on fire : " + player.IsOnFire());
-        if (player.IsOnFire())
+        if (collision.gameObject.tag == "Player")
         {
-            player.SetOnFire(false);
-            //Debug.Log("test");
-            Break();
+            //Debug.Log("player is on fire : " + player.IsOnFire());
+            if (player.IsOnFire())
+            {
+                player.SetOnFire(false);
+                //Debug.Log("test");
+                Break();
+            }
         }
+            
     }
 
     private void Break()
