@@ -9,7 +9,7 @@ public class MainCamera : MonoBehaviour
     public Transform player;
     public Vector3 offset;
     public bool Camera = true;
-    public float panSpeed = 20f;
+    private float panSpeed = 200f;
 
 
     // Update is called once per frame
