@@ -22,23 +22,25 @@ public class MainCamera : MonoBehaviour
     {
 
         Vector3 pos = transform.position;
-        float edgeSize = 30f;
-       
-        if (Input.mousePosition.x > Screen.width - edgeSize)
+        float edgeSize = 150f;
+        if (Input.GetMouseButtonDown(0))
         {
-            pos.x += panSpeed * Time.deltaTime;
-        }
-        if (Input.mousePosition.x < edgeSize)
-        {
-            pos.x -= panSpeed * Time.deltaTime;
-        }
-        if (Input.mousePosition.y > Screen.height - edgeSize)
-        {
-            pos.y += panSpeed * Time.deltaTime;
-        }
-        if (Input.mousePosition.y < edgeSize)
-        {
-            pos.y -= panSpeed * Time.deltaTime;
+            if (Input.mousePosition.x > Screen.width - edgeSize)
+            {
+                pos.x += panSpeed * Time.deltaTime;
+            }
+            if (Input.mousePosition.x < edgeSize)
+            {
+                pos.x -= panSpeed * Time.deltaTime;
+            }
+            if (Input.mousePosition.y > Screen.height - edgeSize)
+            {
+                pos.y += panSpeed * Time.deltaTime;
+            }
+            if (Input.mousePosition.y < edgeSize)
+            {
+                pos.y -= panSpeed * Time.deltaTime;
+            }
         }
         transform.position = pos;
     }
